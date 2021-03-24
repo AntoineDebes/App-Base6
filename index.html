@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LazyTask</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div id="image-container">
+        <div class="image-flex-row">
+            <div class="first-image-div">
+            <img src="images/Background.png" class="winnie-honey-wood">
+            </div>
+            <div class="second-image-div">
+            <img src="images/winnie-honey.png" class="winnie-honey">
+            </div>
+        </div>
+    </div>
+    <div class="div-form-container-one">
+        <div id="div-form-container">
+            <form class="form-container">
+                <div class="head-container">
+                    <label>
+                        <input type="button" value="Add a task" id="add-task" >
+                    </label>
+                    <label>
+                        <input type="button" value="Tasks list" id="list-task">
+                    </label>
+                </div>
+                <div id="add-task-container">
+                    <label>Add your task:<br>
+                        <input type="text" id="add-task-text" placeholder="ex:I want to eat everthing">
+                    </label>
+                </div>
+                <div id="list-container">   
+                    <label>Your tasks:<br>
+                        <input list="tasks-list" id="task-list">
+                            <datalist id="tasks-list">
+                                <option value="1"></option>
+                            </datalist>
+                    </label><br>
+                    <label id="done-part">Is it done?
+                        <input type="checkbox" id="task-done">
+                    </label>
+                    <label id="undone-part">Mark it as undone:
+                        <input type="checkbox" id="task-undone">
+                    </label>
+                    <label id="remove-part">
+                        <input type="button" id="task-remove" value="Remove task">
+                    </label>
+                    <label id="edit-part">
+                        <input type="button" id="task-edit" value="Edit task">
+                        <input type="text" id="task-to-edit" placeholder="Edit here">
+                    </label>
+                </div>  
+            </form>
+        </div>  
+    <script type="text/javascript" src="./script/script.js"></script>
+</body>
+</html>
