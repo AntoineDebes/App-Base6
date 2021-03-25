@@ -6,6 +6,10 @@ body {
   );
 }
 
+#username-title {
+  display: none;
+}
+
 #image-container {
   position: relative;
   display: flex;
@@ -41,7 +45,6 @@ body {
 .form-container {
   display: inline-flex;
   flex-direction: column;
-  height: 330px;
   width: 270px;
 }
 
@@ -152,6 +155,16 @@ body {
 }
 
 @media (min-width: 850px) {
+  #username-title {
+    padding-top: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 50px;
+    color: rgb(85, 46, 24);
+  }
+
   #image-container {
     position: relative;
     display: inline-flex;

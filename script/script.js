@@ -1,4 +1,22 @@
 /**
+ * username - target the username and display it
+ */
+let getUserName = (function(){
+    let userName = window.prompt("Please insert your name LazyBoy");
+    let output = "";
+    let namesOfFreinds = ["Gaby","Kevin"];
+    if(userName === null || userName === ""){
+        output = namesOfFreinds[Math.floor(Math.random() * namesOfFreinds.length)];
+    }
+    else{
+        output = userName.charAt(0).toUpperCase()+userName.slice(1);
+    }
+    document.title = "Lazy"+output;
+    document.getElementById("username-title").innerHTML = "Welcome Lazy"+output;
+})();
+
+
+/**
  * Add a task button
  */
 let addButton = document.getElementById("add-task")
