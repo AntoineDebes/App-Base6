@@ -10,7 +10,7 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 97vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -24,13 +24,13 @@ body {
 
 .div-form-container-one {
   display: flex;
-  width: 100%;
+  width: 99%;
   justify-content: center;
+  position: absolute;
+  top: 28%;
 }
 
 #div-form-container {
-  position: absolute;
-  top: 35%;
   background: rgba(143, 83, 50, 0.9);
   color: white;
   border: 3px solid rgba(143, 83, 50, 0.9);
@@ -41,8 +41,8 @@ body {
 .form-container {
   display: inline-flex;
   flex-direction: column;
-  height: 250px;
-  width: 260px;
+  height: 330px;
+  width: 270px;
 }
 
 .head-container {
@@ -76,6 +76,13 @@ body {
   padding-top: 10px;
 }
 
+#add-texte-tasks {
+  color: white;
+  background: rgba(41, 136, 22, 1);
+  width: 60px;
+  height: 30px;
+}
+
 #add-task-text {
   height: 25px;
   width: 70%;
@@ -86,17 +93,17 @@ body {
   padding-top: 10px;
   font-size: 20px;
 }
-#done-part {
+.done-part {
   display: block;
   padding-top: 10px;
 }
 
-#undone-part {
+.undone-part {
   display: block;
   padding-top: 7px;
 }
 
-#remove-part {
+.remove-part {
   display: block;
   padding-top: 10px;
 }
@@ -104,16 +111,34 @@ body {
 #task-remove {
   background-color: rgba(192, 54, 58, 1);
   color: white;
-  width: 100px;
-  height: 30px;
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 5px 1px;
+  width: auto;
+  height: 25px;
+  box-shadow: rgba(0, 0, 0, 1) 0px 0px 5px 1px;
   border-radius: 8px;
   font-size: 15px;
 }
 
-#edit-part {
-  display: flex;
+.edit-part {
+  display: block;
   padding-top: 10px;
+}
+
+.edit-input-part {
+  display: flex;
+  padding-top: 2px;
+}
+
+.save-part {
+  display: block;
+  padding-top: 10px;
+}
+
+#save-btn {
+  color: white;
+  background: rgba(41, 136, 22, 1);
+  width: 70px;
+  height: 25px;
+  border-radius: 8px;
 }
 
 #task-edit {
@@ -125,6 +150,7 @@ body {
   border-radius: 7px;
   font-size: 15px;
 }
+
 @media (min-width: 850px) {
   #image-container {
     position: relative;
@@ -132,7 +158,6 @@ body {
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    height: 97vh;
     width: 100%;
   }
 

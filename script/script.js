@@ -32,6 +32,7 @@ function displayList(){
     else{
         listShow.style.display = "none";
     }
+    pushIt()
 }
 /**
  * Add a task to array
@@ -39,13 +40,13 @@ function displayList(){
 
 let tasks = [];
 
-let texte = document.getElementById("add-task-text");
+
 let addBtn = document.getElementById("add-texte-tasks");
 addBtn.addEventListener("click",()=>addTask());
 function addTask(){
-    tasks.push(texte.value);
-    texte.value="";
-    pushIt()
+    let text = document.getElementById("add-task-text");
+    tasks.push(text.value);
+    text.value="";
 }
 
 /**
@@ -53,9 +54,68 @@ function addTask(){
  */
  var options = '';
 function pushIt(){
-    options += '<option value="' + tasks[tasks.length-1] + '" />';
- document.getElementById('tasks-list').innerHTML = options;
+    options="";
+    for(let i =0;i<tasks.length;i++){
+        options += '<option value="' + tasks[i] + '" />';
+    }
+    document.getElementById('tasks-list').innerHTML = options;
 }
 /**
- * Is is done feature
+ * Is is done/undone feature
  */
+const saveBtn = document.getElementById("save-btn");
+saveBtn.addEventListener("click",()=>saveButton());
+function saveButton(){
+    let texte = document.getElementById("task-list")
+    let doneCheck = document.getElementById("task-done").checked;
+    let undoneCheck = document.getElementById("task-undone").checked;
+    let place = tasks.indexOf(texte.value);
+    if(doneCheck && undoneCheck){
+        alert("Please select 1 box");
+    }
+    else if(doneCheck && place>-1){
+        tasks[place] = texte.value.match(/\w+/)+" 'done'";
+        texte.value="";
+        pushIt();
+    }
+    else if(undoneCheck && place>-1){
+        tasks[place] = texte.value.match(/\w+/) + " 'undone'";
+        texte.value = "";
+        pushIt();
+    }
+    else if(place<0){
+        alert("This task doesn't exist");
+    }
+}
+
+/**
+ * remove - remove a task
+ */
+const removeBtn = document.getElementById("task-remove");
+removeBtn.addEventListener("click",()=>removeTask());
+function removeTask(){
+    let texte = document.getElementById("task-list")
+    let place = tasks.indexOf(texte.value);
+    tasks.splice(tasks[place],1);
+    texte.value="";
+    pushIt()
+}
+
+/**
+ * edit- edits a task
+ */
+const editBtn = document.getElementById("task-edit");
+editBtn.addEventListener("click",()=>editTask());
+
+function editTask(){
+    let textToReplace = document.getElementById("task-to-edit");
+    let texte = document.getElementById("task-list");
+    let place = tasks.indexOf(texte.value);
+    if(place<0){
+        alert("Please select a task")
+    }else{
+        tasks.splice(tasks[place],1,textToReplace.value);
+        texte.value=""
+        pushIt();
+    }
+}

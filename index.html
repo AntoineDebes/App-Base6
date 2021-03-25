@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LazyTask</title>
+    <link rel="stylesheet" href="./style/_global.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" href="./images/honey-pot.png" type="image/x-icon">  
 </head>
 <body>
     <div id="image-container">
@@ -32,6 +34,8 @@
                 <div id="add-task-container">
                     <label>Add your task:<br>
                         <input type="text" id="add-task-text" placeholder="ex:I want to eat everthing">
+                    </label>
+                    <label>
                         <input type="button" id="add-texte-tasks" value="Add">
                     </label>
                 </div>
@@ -41,18 +45,23 @@
                             <datalist id="tasks-list">
                             </datalist>
                     </label><br>
-                    <label id="done-part">Is it done?
+                    <label class="done-part">Is it done?
                         <input type="checkbox" id="task-done">
                     </label>
-                    <label id="undone-part">Mark it as undone:
+                    <label class="undone-part">Mark it as undone:
                         <input type="checkbox" id="task-undone">
                     </label>
-                    <label id="remove-part">
+                    <label class="remove-part">
                         <input type="button" id="task-remove" value="Remove task">
                     </label>
-                    <label id="edit-part">
+                    <label class="edit-part">
                         <input type="button" id="task-edit" value="Edit task">
+                    </label>
+                    <label class="edit-input-part">
                         <input type="text" id="task-to-edit" placeholder="Edit here">
+                    </label>
+                    <label class="save-part">
+                        <input type="button" id="save-btn" value="save">
                     </label>
                 </div>  
             </form>
