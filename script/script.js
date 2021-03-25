@@ -131,7 +131,11 @@ function editTask(){
     let place = tasks.indexOf(texte.value);
     if(place<0){
         alert("Please select a task")
-    }else{
+    }
+    else if(textToReplace.value == ""){
+        alert("Please fill the edit text");
+    }
+    else{
         tasks.splice(tasks[place],1,textToReplace.value);
         texte.value=""
         pushIt();
