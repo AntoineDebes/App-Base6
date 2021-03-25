@@ -25,12 +25,12 @@ addButton.addEventListener("click",()=>displayAdd());
 
 
 function displayAdd(){
-    if(addShow.style.display ==="none"){
-        addShow.style.display = "block";
-        listShow.style.display = "none";
+    if(addShow.style.display ==="block"){
+        addShow.style.display = "none";
     }
     else{
-        addShow.style.display = "none";
+        addShow.style.display = "block";
+        listShow.style.display = "none";
     }
 }
 /**
@@ -43,12 +43,12 @@ listButton.addEventListener("click",()=>displayList());
 
 function displayList(){
 
-    if(listShow.style.display === "none"){
-        listShow.style.display = "block";
-        addShow.style.display = "none";
+    if(listShow.style.display === "block"){
+        listShow.style.display = "none";
     }
     else{
-        listShow.style.display = "none";
+        listShow.style.display = "block";
+        addShow.style.display = "none";
     }
     pushIt()
 }

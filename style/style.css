@@ -6,10 +6,6 @@ body {
   );
 }
 
-input[type="button"] {
-  outline: none;
-}
-
 #username-title {
   display: none;
 }
